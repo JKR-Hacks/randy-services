@@ -46,7 +46,7 @@ class App extends Component {
       })}
     </div>
     );
-  }
+  };
 
 //   id: 1,
 //   Offense: {
