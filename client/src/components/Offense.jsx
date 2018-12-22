@@ -7,33 +7,33 @@ class Offense extends Component {
 
   Offense() {
     return (
-  <div id="OffenseData">
-      <h3 id="Header">Offense</h3>
-      <table className="table table-striped table-sm ">
-      <thead className="thead-dark">
-          <tr>
-          <th scope="col">#</th>
-          <th scope="col">Player</th>
-          <th scope="col">Passing</th>
-          <th scope="col">Rushing</th>
-          <th scope="col">Receiving</th>
-          <th scope="col">Touchdowns</th>
-        </tr>
-        </thead>
-      <tbody>
-          {this.props.sample.map((elem, i) => ([
-          <tr>
-              <th scope="row">{i + 1}</th>
-              <td>{elem.Offense.Player}</td>
-              <td>{elem.Offense.Passing}</td>
-              <td>{elem.Offense.Rushing}</td>
-              <td>{elem.Offense.Receiving}</td>
-              <td>{elem.Offense.Touchdowns}</td>
-            </tr>,
-        ]))}
-        </tbody>
-    </table>
-    </div>
+      <div id="OffenseData">
+        <h3 id="Header">Offense</h3>
+        <table className="table table-striped table-sm ">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Player</th>
+              <th scope="col">Passing</th>
+              <th scope="col">Rushing</th>
+              <th scope="col">Receiving</th>
+              <th scope="col">Touchdowns</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.sample.map((elem, i) => ([
+              <tr>
+                <th scope="row">{i + 1}</th>
+                <td>{elem.Offense.Player}</td>
+                <td>{elem.Offense.Passing}</td>
+                <td>{elem.Offense.Rushing}</td>
+                <td>{elem.Offense.Receiving}</td>
+                <td>{elem.Offense.Touchdowns}</td>
+              </tr>,
+            ]))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 

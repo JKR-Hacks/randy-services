@@ -11,46 +11,49 @@ class App extends Component {
     super(props);
     this.state = {
       sample: sampleData,
-      view: "home"
+      view: 'home',
     };
   }
 
 
   changeView(e) {
     this.setState({
-      view: e
+      view: e,
     });
-      this.renderView()
+    this.renderView();
   }
 
 
   renderView() {
-    if (this.state.view === "home") {
+    const view = this.state.view;
+    if (view === 'home') {
       return (
         <div id="homePage">
-          <img src="https://pngimage.net/wp-content/uploads/2018/06/la-rams-logo-png-5.png" width="400" height="190" />
-          <br></br>
-          <br></br>
+          <a href="https://www.therams.com/" rel="opener" target="_blank">
+            <img src="https://pngimage.net/wp-content/uploads/2018/06/la-rams-logo-png-5.png" width="400" height="190" alt="" />
+          </a>
+          <br />
+          <br />
           <h1>Welcome To The Official L.A. Rams Statistics App!</h1>
           <h4>Brought to you by ESPN</h4>
         </div>
       );
-    } else if (this.state.view === "offense") {
+    } if (view === 'offense') {
       return (
         <div>
           <Offense sample={this.state.sample.default} />
         </div>
       );
-    } else if (this.state.view === "defense") {
+    } if (view === 'defense') {
       return (
         <div>
           <Defense sample={this.state.sample.default} />
         </div>
       );
-    } else if (this.state.view === "specialTeams") {
+    } if (view === 'specialTeams') {
       return (
         <div>
-          <SpecialTeams sample={this.state.sample.default}/>
+          <SpecialTeams sample={this.state.sample.default} />
         </div>
       );
     }
@@ -60,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar change={this.changeView.bind(this)}/>
+        <Navbar change={this.changeView.bind(this)} />
         {this.renderView()}
       </div>
     );
