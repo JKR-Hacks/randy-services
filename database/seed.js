@@ -1,3 +1,5 @@
+const db = require('./index.js');
+
 const sampleData = [{
   id: 1,
   Offense: {
@@ -319,4 +321,10 @@ const sampleData = [{
   SpecialTeams: { Player: 'Madeleine Benduhn', FieldGoal: 4, ExtraPoint: 2507 },
 }];
 
-export default sampleData;
+
+const insertSampleBlogs = () => {
+  db.Stats.create(sampleData)
+    .then(() => db.disconnect());
+};
+
+insertSampleBlogs();
