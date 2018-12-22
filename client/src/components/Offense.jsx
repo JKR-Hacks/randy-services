@@ -8,9 +8,9 @@ class Offense extends Component {
   Offense() {
     return (
   <div id="OffenseData">
-      <h3>Offense</h3>
-      <table className="table">
-      <thead>
+      <h3 id="Header">Offense</h3>
+      <table className="table table-striped table-sm ">
+      <thead className="thead-dark">
           <tr>
           <th scope="col">#</th>
           <th scope="col">Player</th>

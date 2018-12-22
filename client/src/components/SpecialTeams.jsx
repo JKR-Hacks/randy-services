@@ -9,9 +9,9 @@ class SpecialTeams extends Component {
     return (
 
       <div id="SpecialTeamsData">
-        <h3>Special Teams</h3>
-        <table className="table">
-          <thead>
+        <h3 id="Header">Special Teams</h3>
+        <table className="table table-striped table-sm">
+          <thead className="thead-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Player</th>

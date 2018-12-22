@@ -28,7 +28,11 @@ class App extends Component {
     if (this.state.view === "home") {
       return (
         <div id="homePage">
-          <h1>Welcome To My ESPN App!</h1>
+          <img src="https://pngimage.net/wp-content/uploads/2018/06/la-rams-logo-png-5.png" width="400" height="190" />
+          <br></br>
+          <br></br>
+          <h1>Welcome To The Official L.A. Rams Statistics App!</h1>
+          <h4>Brought to you by ESPN</h4>
         </div>
       );
     } else if (this.state.view === "offense") {
