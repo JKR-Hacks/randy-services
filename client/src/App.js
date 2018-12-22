@@ -11,17 +11,53 @@ class App extends Component {
     super(props);
     this.state = {
       sample: sampleData,
+      view: "home"
     };
+  }
+
+
+  changeView(e) {
+    this.setState({
+      view: e
+    });
+      this.renderView()
+  }
+
+
+  renderView() {
+    if (this.state.view === "home") {
+      return (
+        <div id="homePage">
+          <h1>Welcome To My ESPN App!</h1>
+        </div>
+      );
+    } else if (this.state.view === "offense") {
+      return (
+        <div>
+          <Offense sample={this.state.sample.default} />
+        </div>
+      );
+    } else if (this.state.view === "defense") {
+      return (
+        <div>
+          <Defense sample={this.state.sample.default} />
+        </div>
+      );
+    } else if (this.state.view === "specialTeams") {
+      return (
+        <div>
+          <SpecialTeams sample={this.state.sample.default}/>
+        </div>
+      );
+    }
   }
 
 
   render() {
     return (
       <div>
-        <Navbar />
-        {/* <Offense sample={this.state.sample.default}/> */}
-        {/* <Defense sample={this.state.sample.default}/> */}
-        <SpecialTeams sample={this.state.sample.default}/>
+        <Navbar change={this.changeView.bind(this)}/>
+        {this.renderView()}
       </div>
     );
   }

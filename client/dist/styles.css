@@ -1,0 +1,22 @@
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+#OffenseData {
+    padding: 20px 20px 20px 20px
+}
+
+#DefenseData {
+    padding: 20px 20px 20px 20px
+}
+
+#SpecialTeamsData {
+    padding: 20px 20px 20px 20px
+}
+
+#homePage {
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: courier;
+}
