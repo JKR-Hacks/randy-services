@@ -21,6 +21,7 @@ const statsSchema = {
   fumblesForced: Number,
   fieldGoals: Number,
   extraPoints: Number,
+  deleteMe: DELETEME,
 };
 
 const Stats = mongoose.model('Stats', statsSchema);
