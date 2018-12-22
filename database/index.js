@@ -23,6 +23,8 @@ const statsSchema = {
   extraPoints: Number,
 };
 
+// RANDY THOMAS WAS HERE//
+
 const Stats = mongoose.model('Stats', statsSchema);
 
 
