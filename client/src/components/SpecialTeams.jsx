@@ -1,0 +1,45 @@
+import React, { Component } from 'react';
+
+class SpecialTeams extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  specialTeams() {
+    return (
+
+      <div id="SpecialTeamsData">
+        <h3>Special Teams</h3>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Player</th>
+              <th scope="col">Field Goal</th>
+              <th scope="col">Extra Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.sample.map((elem, i) => ([
+              <tr>
+                <th scope="row">{i + 1}</th>
+                <td>{elem.SpecialTeams.Player}</td>
+                <td>{elem.SpecialTeams.FieldGoal}</td>
+                <td>{elem.SpecialTeams.ExtraPoint}</td>
+              </tr>,
+            ]))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+
+  render() {
+    return (
+      this.specialTeams()
+    );
+  }
+}
+
+export default SpecialTeams;
