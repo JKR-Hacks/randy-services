@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/tattooAssistant/newClient');
+mongoose.connect('mongodb://localhost/espn/stats');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
