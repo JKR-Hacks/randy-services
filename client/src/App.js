@@ -13,7 +13,7 @@ class App extends Component {
   seedData() {
     return (
     <div>
-      <h1>Offense:</h1>
+      {/* <h1>Offense:</h1>
       {this.state.sample.default.map((elem, i) => {
         return (
         <p key={i}><b>Player:</b> {elem.Offense.Player} <br></br>
@@ -43,7 +43,34 @@ class App extends Component {
         <b>Extra Points:</b> {elem.SpecialTeams.ExtraPoint} <br></br>
         </p>
         );
-      })}
+      })} */}
+      <h3>Offense</h3>
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Player</th>
+            <th scope="col">Passing</th>
+            <th scope="col">Rushing</th>
+            <th scope="col">Receiving</th>
+            <th scope="col">Touchdowns</th>
+          </tr>
+        </thead>
+          <tbody>
+          {this.state.sample.default.map((elem, i) => {
+            return ([
+              <tr>
+                <th scope="row">{i+1}</th>
+                <td>{elem.Offense.Player}</td>
+                <td>{elem.Offense.Passing}</td>
+                <td>{elem.Offense.Rushing}</td>
+                <td>{elem.Offense.Receiving}</td>
+                <td>{elem.Offense.Touchdowns}</td>
+              </tr>
+            ]);
+          })}
+        </tbody>
+      </table>
     </div>
     );
   };
