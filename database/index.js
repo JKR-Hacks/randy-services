@@ -27,5 +27,9 @@ const statsSchema = {
 
 const Stats = mongoose.model('Stats', statsSchema);
 
+const save = function () {
+
+};
+
 
 module.exports = db;
