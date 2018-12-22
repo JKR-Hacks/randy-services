@@ -9,7 +9,7 @@ class Navbar extends Component {
   navbar() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#"><img height="30" src="https://refb.org/wp-content/uploads/2018/09/ESPN-Logo.png" width="70" /></a>
+        <a className="navbar-brand" href="http://www.espn.com/nfl/team/_/name/lar/los-angeles-rams_" target="_blank"><img height="30" src="https://refb.org/wp-content/uploads/2018/09/ESPN-Logo.png" width="70" /></a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" className="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
           <span className="navbar-toggler-icon" />
         </button>
