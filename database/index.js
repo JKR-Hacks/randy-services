@@ -25,6 +25,5 @@ const statsSchema = {
 
 const Stats = mongoose.model('Stats', statsSchema);
 
-// THIS IS MERELY A TEST//
 
 module.exports = db;
