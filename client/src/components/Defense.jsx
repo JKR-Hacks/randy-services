@@ -37,16 +37,6 @@ class Defense extends Component {
     );
   }
 
-  //   id: 1,
-  //   Offense: {
-  //     Player: 'Kath Pauwel', Passing: '95884', Rushing: '1', Receiving: '78309', Touchdowns: '05417',
-  //   },
-  //   Defense: {
-  //     Player: 'Dermot Pendlington', Tackles: '133', Sacks: '231', Interceptions: '44', FumblesForced: '67964',
-  //   },
-  //   SpecialTeams: { Player: 'Rossie Medgewick', FieldGoal: '11013', ExtraPoint: '8040' },
-  // },
-
   render() {
     return (
       this.defense()

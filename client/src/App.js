@@ -25,7 +25,7 @@ class App extends Component {
 
 
   renderView() {
-    const view = this.state.view;
+    const { sample, view } = this.state;
     if (view === 'home') {
       return (
         <div id="homePage">
@@ -41,19 +41,19 @@ class App extends Component {
     } if (view === 'offense') {
       return (
         <div>
-          <Offense sample={this.state.sample.default} />
+          <Offense sample={sample.default} />
         </div>
       );
     } if (view === 'defense') {
       return (
         <div>
-          <Defense sample={this.state.sample.default} />
+          <Defense sample={sample.default} />
         </div>
       );
     } if (view === 'specialTeams') {
       return (
         <div>
-          <SpecialTeams sample={this.state.sample.default} />
+          <SpecialTeams sample={sample.default} />
         </div>
       );
     }
