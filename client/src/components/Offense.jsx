@@ -6,6 +6,7 @@ class Offense extends Component {
   }
 
   Offense() {
+    const { sample } = this.props;
     return (
       <div id="OffenseData">
         <h3 id="Header">Offense</h3>
@@ -21,7 +22,7 @@ class Offense extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.sample.map((elem, i) => ([
+            {sample.map((elem, i) => ([
               <tr>
                 <th scope="row">{i + 1}</th>
                 <td>{elem.Offense.Player}</td>

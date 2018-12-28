@@ -6,8 +6,8 @@ class SpecialTeams extends Component {
   }
 
   specialTeams() {
+    const { sample } = this.props;
     return (
-
       <div id="SpecialTeamsData">
         <h3 id="Header">Special Teams</h3>
         <table className="table table-striped table-sm">
@@ -20,7 +20,7 @@ class SpecialTeams extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.sample.map((elem, i) => ([
+            {sample.map((elem, i) => ([
               <tr>
                 <th scope="row">{i + 1}</th>
                 <td>{elem.SpecialTeams.Player}</td>
