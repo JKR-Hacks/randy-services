@@ -3,6 +3,7 @@ import Offense from './components/Offense.jsx';
 import Navbar from './components/Navbar.jsx';
 import Defense from './components/Defense.jsx';
 import SpecialTeams from './components/SpecialTeams.jsx';
+import MainComponent from './components/MainComponent.jsx';
 
 const sampleData = require('./Sample_Data.js');
 
@@ -54,6 +55,12 @@ class App extends Component {
       return (
         <div>
           <SpecialTeams sample={sample.default} />
+        </div>
+      );
+    } if (view === 'mainComponent') {
+      return (
+        <div>
+          <MainComponent sample={sample.default} />
         </div>
       );
     }
