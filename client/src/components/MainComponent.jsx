@@ -8,7 +8,7 @@ class MainComponent extends Component {
   mainComp() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <h1>Welcome To My Main Component!</h1>
       </div>
     );
   }
