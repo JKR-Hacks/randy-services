@@ -20,7 +20,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?gender=male&results=4')
+    fetch('https://randomuser.me/api/?gender=male&results=6')
       .then(res => res.json())
       .then(
         (result) => {
