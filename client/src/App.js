@@ -16,6 +16,10 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    // SET INITIAL STATE HERE FOR SAMPLE DATA WITH SEEDED DATA
+  }
+
 
   changeView(e) {
     this.setState({
