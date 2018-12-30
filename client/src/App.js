@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import Offense from './components/Offense.jsx';
 import Navbar from './components/Navbar.jsx';
 import Defense from './components/Defense.jsx';
@@ -12,12 +13,23 @@ class App extends Component {
     super(props);
     this.state = {
       sample: sampleData,
+      photos: '',
       view: 'home',
     };
   }
 
+
   componentDidMount() {
-    // SET INITIAL STATE HERE FOR SAMPLE DATA WITH SEEDED DATA
+    fetch('https://randomuser.me/api/?gender=male&results=4')
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            photos: result,
+          });
+        },
+      );
+    this.renderView();
   }
 
 
@@ -30,7 +42,7 @@ class App extends Component {
 
 
   renderView() {
-    const { sample, view } = this.state;
+    const { sample, view, photos } = this.state;
     if (view === 'home') {
       return (
         <div id="homePage">
@@ -64,7 +76,7 @@ class App extends Component {
     } if (view === 'mainComponent') {
       return (
         <div>
-          <MainComponent sample={sample.default} />
+          <MainComponent sample={sample.default} photos={photos.results} />
         </div>
       );
     }

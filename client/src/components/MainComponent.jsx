@@ -6,9 +6,10 @@ class MainComponent extends Component {
   }
 
   mainComp() {
+    const { samples, photos } = this.props;
     return (
       <div>
-        <h1>Welcome To My Main Component!</h1>
+        {photos.map(elem => <img src={elem.picture.large} />)}
       </div>
     );
   }
