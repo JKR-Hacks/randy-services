@@ -9,7 +9,6 @@ class MainComponent extends Component {
     const { samples, photos } = this.props;
     return (
       <div>
-        <p>Player</p>
         {photos.map(elem => <img src={elem.picture.large} />)}
       </div>
     );
