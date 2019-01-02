@@ -29,6 +29,17 @@ class App extends Component {
           });
         },
       );
+    $.ajax({
+      method: 'GET',
+      url: '/',
+      dataType: 'json',
+      success(data) {
+        console.log(data, 'THIS IS RETURNED DATA');
+      },
+      error(err) {
+        console.log(err, 'ERROR');
+      },
+    });
     this.renderView();
   }
 
