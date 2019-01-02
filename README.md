@@ -13,4 +13,4 @@ Open project on http://localhost:3000/ <br>
 </p>
 
 
-see more: http://www.github.com/rlthomascc
+<i> see more: http://www.github.com/rlthomascc </i>
