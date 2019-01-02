@@ -31,7 +31,7 @@ class App extends Component {
       );
     $.ajax({
       method: 'GET',
-      url: '/',
+      url: 'http://localhost:3000/',
       dataType: 'json',
       success(data) {
         console.log(data, 'THIS IS RETURNED DATA');
