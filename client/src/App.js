@@ -12,7 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sample: sampleData,
+      // sample: sampleData,
+      sample: '',
       photos: '',
       view: 'home',
     };
@@ -20,24 +21,29 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?gender=male&results=6')
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            photos: result,
-          });
-        },
-      );
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3000/stats',
+      url: 'https://randomuser.me/api/?gender=male&results=6',
       dataType: 'json',
-      error(err) {
+      error: (err) => {
+        console.log(err, 'error');
+      },
+      success: (data) => {
+        this.setState({
+          photos: data,
+        });
+      },
+    });
+    $.ajax({
+      method: 'GET',
+      url: '/stats',
+      error: (err) => {
         console.log(err, 'err');
       },
-      success(data) {
-        console.log(data, 'data');
+      success: (data) => {
+        this.setState({
+          sample: data,
+        });
       },
     });
     this.renderView();
@@ -69,25 +75,25 @@ class App extends Component {
     } if (view === 'offense') {
       return (
         <div>
-          <Offense sample={sample.default} />
+          <Offense sample={sample} />
         </div>
       );
     } if (view === 'defense') {
       return (
         <div>
-          <Defense sample={sample.default} />
+          <Defense sample={sample} />
         </div>
       );
     } if (view === 'specialTeams') {
       return (
         <div>
-          <SpecialTeams sample={sample.default} />
+          <SpecialTeams sample={sample} />
         </div>
       );
     } if (view === 'mainComponent') {
       return (
         <div>
-          <MainComponent sample={sample.default} photos={photos.results} />
+          <MainComponent sample={sample} photos={photos.results} />
         </div>
       );
     }

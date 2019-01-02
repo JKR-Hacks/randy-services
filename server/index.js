@@ -11,8 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/stats', (req, res) => {
   db.Stats.find({}).exec((err, data) => {
-    console.log(data, 'dataaa');
-    res.send('eeojio');
+    res.send(data);
   });
 });
 
