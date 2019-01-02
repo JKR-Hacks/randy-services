@@ -3,12 +3,14 @@ The Stats component will display the median number of Passing yards, Rushing yar
 
 
 <h1>Development</h1>
-Run npm install -g webpack to install webpack globally
-Run npm install to install dependencies
-Run npm run react to Run compile
-Run npm run server to run server
-Run npm run db:setup to seed database with sampleData
-Open project on http://localhost:3000/
+<p>
+Run npm install -g webpack to install webpack globally <br>
+Run npm install to install dependencies <br>
+Run npm run react to Run compile <br>
+Run npm run server to run server <br>
+Run npm run db:setup to seed database with sampleData <br>
+Open project on http://localhost:3000/ <br>
+</p>
 
 
 see more: http://www.github.com/rlthomascc
