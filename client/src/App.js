@@ -31,13 +31,13 @@ class App extends Component {
       );
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3000/',
+      url: 'http://localhost:3000/stats',
       dataType: 'json',
-      success(data) {
-        console.log(data, 'THIS IS RETURNED DATA');
-      },
       error(err) {
-        console.log(err, 'ERROR');
+        console.log(err, 'err');
+      },
+      success(data) {
+        console.log(data, 'data');
       },
     });
     this.renderView();

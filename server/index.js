@@ -9,11 +9,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.get('/', (req, res) => {
-  // db.Stats.find().exec((data) => {
-  //   res.send(data);
-  // });
-  res.send('WORKING');
+app.get('/stats', (req, res) => {
+  db.Stats.find({}).exec((err, data) => {
+    console.log(data, 'dataaa');
+    res.send('eeojio');
+  });
 });
 
 const port = 3000;
