@@ -17,16 +17,19 @@ class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbar">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#" onClick={() => this.props.change("home")}>Home </a>
+              <a className="nav-link" href="#" onClick={() => this.props.change('home')}>Home </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={() => this.props.change("offense")}>Offense Stats</a>
+              <a className="nav-link" href="#" onClick={() => this.props.change('offense')}>Offense Stats</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={() => this.props.change("defense")}>Defense Stats</a>
+              <a className="nav-link" href="#" onClick={() => this.props.change('defense')}>Defense Stats</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={() => this.props.change("specialTeams")}>Special Teams Stats</a>
+              <a className="nav-link" href="#" onClick={() => this.props.change('specialTeams')}>Special Teams Stats</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={() => this.props.change('mainComponent')}>Main Component</a>
             </li>
           </ul>
         </div>

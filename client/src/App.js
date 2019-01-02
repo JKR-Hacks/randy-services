@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import Offense from './components/Offense.jsx';
 import Navbar from './components/Navbar.jsx';
 import Defense from './components/Defense.jsx';
 import SpecialTeams from './components/SpecialTeams.jsx';
+import MainComponent from './components/MainComponent.jsx';
 
 const sampleData = require('./Sample_Data.js');
 
@@ -10,9 +12,41 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sample: sampleData,
+      // sample: sampleData,
+      sample: '',
+      photos: '',
       view: 'home',
     };
+  }
+
+
+  componentDidMount() {
+    $.ajax({
+      method: 'GET',
+      url: 'https://randomuser.me/api/?gender=male&results=6',
+      dataType: 'json',
+      error: (err) => {
+        console.log(err, 'error');
+      },
+      success: (data) => {
+        this.setState({
+          photos: data,
+        });
+      },
+    });
+    $.ajax({
+      method: 'GET',
+      url: '/stats',
+      error: (err) => {
+        console.log(err, 'err');
+      },
+      success: (data) => {
+        this.setState({
+          sample: data,
+        });
+      },
+    });
+    this.renderView();
   }
 
 
@@ -25,7 +59,7 @@ class App extends Component {
 
 
   renderView() {
-    const view = this.state.view;
+    const { sample, view, photos } = this.state;
     if (view === 'home') {
       return (
         <div id="homePage">
@@ -41,19 +75,25 @@ class App extends Component {
     } if (view === 'offense') {
       return (
         <div>
-          <Offense sample={this.state.sample.default} />
+          <Offense sample={sample} />
         </div>
       );
     } if (view === 'defense') {
       return (
         <div>
-          <Defense sample={this.state.sample.default} />
+          <Defense sample={sample} />
         </div>
       );
     } if (view === 'specialTeams') {
       return (
         <div>
-          <SpecialTeams sample={this.state.sample.default} />
+          <SpecialTeams sample={sample} />
+        </div>
+      );
+    } if (view === 'mainComponent') {
+      return (
+        <div>
+          <MainComponent sample={sample} photos={photos.results} />
         </div>
       );
     }
