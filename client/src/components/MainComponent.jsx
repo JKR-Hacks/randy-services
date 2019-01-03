@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const MainComponent = ({ sample }) => (
 
-  <div id="container" className="col-lg-3 alert alert-light container">
+  <div id="container" className="col-lg-3 alert alert-primary container">
     <p className="text-dark font-weight-bold text-left">Team Stats</p>
     <div className="row">
 
