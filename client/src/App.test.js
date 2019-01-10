@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
 import { doesNotReject } from 'assert';
