@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const db = require('../database/index.js');
 
 const app = express();
@@ -15,7 +16,7 @@ app.get('/stats', (req, res) => {
   });
 });
 
-const port = 3000;
+const port = process.env.PORT || 8081;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
